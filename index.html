@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Session Website</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Study Session Website</title>
 </head>
 <body>
-
+  <!-- Header Navigation Starts Here  -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Study Session Website</a>
+            <ul>
+                <li><span id="datetime"></span></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        const dateTime = new Date();
+        document.getElementById('datetime').innerHTML = dateTime.toLocaleDateString() + ' ' + dateTime.toLocaleTimeString();
+    </script>
+<!-- Header Navigation Ends Here -->
 </body>
 </html>
