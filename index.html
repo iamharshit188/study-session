@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Session Website</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="floatingNavbar">
+    <div id="timeAndDate"></div>
+    <p>Navigation Bar</p>
+    <button id="changeBackgroundBtn" onclick="changeBackgroundImage()">Change Background</button>
+  </div>
+
+  <div id="left">
+    <div id="leftHeading">Your Notes Here</div>
+    <div id="notes" contenteditable="true">
+      <!-- User's notes go here -->
+    </div>
+    <div id="leftHeading">TaskList</div>
+    <div id="taskList" contenteditable="true">
+      <!-- User's task list goes here -->
+    </div>
+  </div>
+
+  <div id="middle">
+    <div id="clock" class="flip-clock"></div>
+    <div id="buttons">
+      <button onclick="startTimer(60*60)">1 Hr</button>
+      <button onclick="startTimer(2*60*60)">2 Hr</button>
+      <button onclick="startTimer(45*60)">45 Min</button>
+    </div>
+
+    <div id="audioSection">
+      <button class="audioButton" onclick="playAudio('audio1.mp3')">LofiBollyWood</button>
+      <button class="audioButton" onclick="playAudio('audio2.mp3')">Lofi Beats</button>
+      <button class="audioButton" onclick="playAudio('audio3.mp3')">Spiritual</button>
+      <div id="audioInfo"></div>
+    </div>
+  </div>
+
+  <div id="right">
+    <div id="tabs">
+      <div id="chatTab" onclick="showIframe('chatgpt')">ChatGPT</div>
+      <div id="searchTab" onclick="showIframe('google')">Google Search</div>
+    </div>
+    <div id="iframeContainer">
+      <iframe id="chatgpt" src="https://www.chatgpt.com"></iframe>
+      <iframe id="google" src="https://www.google.com"></iframe>
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+  <script src="js/index.js"></script>
+</body>
+</html>
