@@ -1,9 +1,15 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background:url("../assets/wall1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
 }
 
 header {
+    background-color: rgba(255, 255, 255, 0.336);
+    backdrop-filter: blur(10px); 
     width: 50%;
     margin: 0 auto;
 }
@@ -34,4 +40,25 @@ nav ul li span {
     font-size: 24px;
     color: #000;
     text-decoration: none;
+}
+
+#datetime {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style for the background button */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
 }

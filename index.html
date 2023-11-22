@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
     <title>Study Session Website</title>
 </head>
 <body>
@@ -16,9 +17,12 @@
             </ul>
         </nav>
     </header>
+
+    <button onclick="changeBackground()">Change Background</button>
+
     <script>
         const dateTime = new Date();
-        document.getElementById('datetime').innerHTML = dateTime.toLocaleDateString() + ' ' + dateTime.toLocaleTimeString();
+        document.getElementById('datetime').innerHTML = dateTime.toLocaleTimeString() + ' ' + dateTime.toLocaleDateString();
     </script>
 <!-- Header Navigation Ends Here -->
 </body>
