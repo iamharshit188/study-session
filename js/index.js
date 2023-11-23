@@ -45,7 +45,7 @@ function updateDateTime() {
 }
 
 function setRandomBackgroundImage() {
-  document.body.style.backgroundImage = `url('../assets/wall${currentBackground}.jpg')`;
+  document.body.style.backgroundImage = `url('images/wall${currentBackground}.jpg')`;
 }
 
 function changeBackgroundImage() {

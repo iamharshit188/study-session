@@ -7,7 +7,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('../images/wall1.jpg');
+  background-image: url('images/wall1.jpg');
   /* Initial background image */
   transition: background-image 0.5s ease-in-out;
 }
