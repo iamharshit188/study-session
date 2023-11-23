@@ -1,6 +1,7 @@
 let timer;
 let currentBackground = 1; // Initial background image
 let timerStatus = false;
+let currentAudio = null;
 // buton hidden on statup
 hideButton();
 
@@ -85,13 +86,51 @@ function changeBackgroundImage() {
 }
 
 function playAudio(audioSource) {
+  // Stop the currently playing audio, if any
+  if (currentAudio !== null) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+
+  // Create and play the new audio
   let audio = new Audio(audioSource);
   audio.loop = true;
   audio.play();
 
+  // Update the currentAudio variable
+  currentAudio = audio;
+
   // Display audio information
   document.getElementById("audioInfo").textContent =
     `Now Playing: ${audioSource}`;
+
+  // Update the icon to the pause icon
+  updateIcon("pause");
+}
+
+function pauseAudio() {
+  // Pause the currently playing audio, if any
+  if (currentAudio !== null) {
+    currentAudio.pause();
+    // Update the icon to the play icon
+    updateIcon("play");
+  }
+}
+
+function updateIcon(iconType) {
+  // Update the icon based on the iconType (either "play" or "pause")
+  const iconElement = document.getElementById("audioIcon");
+  iconElement.className = `fa-solid ${iconType === "play" ? "fa-play" : "fa-pause"}`;
+}
+
+
+function playPause() {
+  // Toggle between play and pause based on the current state
+  if (currentAudio !== null && !currentAudio.paused) {
+    pauseAudio();
+  } else {
+    playAudio(currentAudio);
+  }
 }
 
 updateDateTime(); // Initial call
