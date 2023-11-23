@@ -34,7 +34,7 @@ body {
   }
 
   #notes {
-    height: 40%;
+    height: 50%;
     padding: 10px;
     margin-bottom: 10px;
     overflow-y: auto;
@@ -250,3 +250,22 @@ body {
       padding: 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+
+  #tabs {
+    border-radius: 20px;
+    margin: 10px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #iframeContainer {
+    border-radius: 20px;
+    margin: 10px;
+    background-color: white;
+  }
+
+  #chatgpt, google {
+    border-radius: 20px;
+  } 
