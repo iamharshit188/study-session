@@ -41,14 +41,23 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     border-radius: 10px;
+    overflow: hidden;
   }
 
-  #taskList {
-    height: 60%;
+  .container {
     padding: 10px;
+    margin-bottom: 10px;
     overflow-y: auto;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
+
+  #taskList {
+    height: max-content;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-y: auto;
     border-radius: 10px;
   }
 
@@ -199,7 +208,7 @@ body {
 
   /* Frosted Background */
   #left {
-      width: 30%;
+      width: 25%;
       margin-right: 20px;
       display: flex;
       flex-direction: column;
@@ -271,14 +280,6 @@ body {
   }
   
   /* Testing UI  */
-
-  .container { 
-    max-width: 600px; 
-    width: 100%; 
-    background-color: #fff; 
-    padding: 20px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  } 
    
   .input-container { 
     display: flex; 
@@ -286,9 +287,9 @@ body {
   } 
    
   input { 
-    flex: 1; 
+    flex: auto; 
     padding: 10px; 
-    border: 1px solid #ddd; 
+    border: 1px solid #edebeb; 
     border-radius: 4px; 
   } 
    
@@ -314,6 +315,10 @@ body {
     display: flex; 
     align-items: center; 
     margin-bottom: 10px; 
+    padding: 5%;
+    background-color: white;
+    border: 1px solid #edebeb; 
+    border-radius: 10px;
   } 
    
   .checkbox { 
