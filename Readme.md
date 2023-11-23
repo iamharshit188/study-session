@@ -17,4 +17,7 @@ It's a time management method where you work in focused sprints, followed by a s
 > What is **Second Brain** :
 Secpmd Brain is your digital memory to organize notes, ideas and insights in one place. It's your go-to for recatlling information and enhanching your learning journey.
 
+2. #Music
+> Does music enhance focus and mood during study?
+Yes it does. Music has the power to evoke emotions and can contribute to a positive and focused mindset. Listening to uplifting or calming music may improve your overall mood, making the study session more enjoyable.
 
