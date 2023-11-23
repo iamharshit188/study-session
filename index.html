@@ -1,65 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Session Website</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    
+
+<style>
+
+
+body {
+            margin: 0%;
+            padding: 0%;
+            background-image: url(images/wall5.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #welcomeModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8); 
+            
+            /* Use a semi-transparent color for the modal background */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+           /* Adjust the blur value as needed */
+        }
+
+        #welcomeModal h2 {
+            color: #333;
+        }
+        /* Style the button */
+.button {
+  background-color: #0a0a23; /* Black background color */
+  color: #ffffff; /* White text color */
+  padding: 15px; /* Add padding to the button */
+  border: none; /* Remove default border */
+  border-radius: 10px; /* Round up the edges */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+  font-size: 16px; /* Increase font size */
+  cursor: pointer; /* Change cursor to pointing hand */
+}
+
+/* Style the button when hovered */
+.button:hover {
+  background-color: #4c90af; /* Change background color to blue on hover */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Style the button when active ( clicked ) */
+.button:active {
+  transform: translateY(2px); /* Move the button slightly down on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a deeper shadow effect on click */
+}
+
+        #continueBtn {
+            background-color: rgb(76, 144, 175);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+/*
+
+   body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(assets/wall4.jpg);
+      
+   }
+   
+    
+   
+  #welcomeModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    
+  }
+
+  #welcomeModal h2 {
+    color: #333;
+  }
+
+  #continueBtn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+*/
+</style>
 </head>
-
 <body>
-  <div id="floatingNavbar">
-    <div id="timeAndDate"></div>
-    <p>Navigation Bar</p>
-    <button id="changeBackgroundBtn" onclick="changeBackgroundImage()">Change Background</button>
-  </div>
-  <div id="left">
-    <div id="leftHeading">
-      <div>Notes</div>
-    </div>
-    <div id="notes" contenteditable="true">
-      <!-- User's notes go here -->
-    </div>
-    <div id="leftHeading">
-      <div>Task List</div>
-      <div class="container">
-        <div class="input-container">
-          <input type="text" id="taskInput" placeholder="Enter your task">
-          <button onclick="addTask()">Add</button>
-        </div>
-        <ul id="taskList"></ul>
-      </div>
-    </div>
-    <!-- User's task list goes here -->
-  </div>
-  <div id="middle">
-    <div id="pomodoro">
-      <div id="clock" class="flip-clock"></div>
-      <div id="buttons">
-        <button onclick="startTimer(60*60)">1 Hr</button>
-        <button onclick="startTimer(2*60*60)">2 Hr</button>
-        <button onclick="startTimer(45*60)">45 Min</button>
-      </div>
-    </div>
-    <div id="audioSection">
-      <button class="audioButton" onclick="playAudio('audio1.mp3')">Bollywood Lofi Beats</button>
-      <button class="audioButton" onclick="playAudio('audio2.mp3')">Lofi Beats</button>
-      <button class="audioButton" onclick="playAudio('audio3.mp3')">Binaural Beats</button>
-      <div id="audioInfo"></div>
-    </div>
-  </div>
-  <div id="right">
-    <div id="tabs">
-      <div id="chatTab" onclick="showIframe('chatgpt')">Ai Assistant</div>
-      <div id="searchTab" onclick="showIframe('google')">Google Search</div>
-    </div>
-    <div id="iframeContainer">
-      <iframe id="chatgpt" src="https://www.blackbox.ai/"></iframe>
-      <iframe id="google" src="https://www.google.com/search?igu=1"></iframe>
-    </div>
-  </div>
-  <script src="js/index.js"></script>
-</body>
+    <div class="welcontianer">
+      <div id="welcomeModal">
+    <h2>Welcome to Our Website!</h2>
+    <p>Thanks for visiting. We hope you enjoy your stay.
 
+      vansh plz add some content like Welcome
+    </p>
+    <button id="continueBtn">Continue</button>
+  </div>
+    </div>
+  
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      var modal = document.getElementById('welcomeModal');
+      var continueBtn = document.getElementById('continueBtn');
+
+      // Show the modal when the page loads
+      modal.style.display = 'block';
+
+      // Redirect to the second page when the "Continue" button is clicked
+      continueBtn.addEventListener('click', function () {
+        window.location.href = "secpage.html"; // Change the URL accordingly
+      });
+    });
+  
+  </script>
+</body>
 </html>
