@@ -17,9 +17,9 @@ body {
 #floatingNavbar {
   position: fixed;
   top: 10px;
-  left: 22%;
+  left: 27%;
   /* Centering and covering 50% width */
-  width: 50%;
+  width: 40%;
   height: 3%;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
@@ -47,7 +47,7 @@ body {
   margin-bottom: 10px;
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -257,7 +257,8 @@ body {
 }
 
 #tabs {
-  height: 10%;
+  height: 5%;
+  opacity: 0.7;
   background-color: #f1f1f1;
   display: flex;
   justify-content: space-around;

@@ -1,111 +1,101 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Study Session Website</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <!-- font awesome icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <body>
-    <div id="floatingNavbar">
-      <div id="timeAndDate"></div>
-      <p>Navigation Bar</p>
-      <button id="changeBackgroundBtn" onclick="changeBackgroundImage()">
-        Change Background
-      </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Session Website</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<!-- font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+  <div id="floatingNavbar">
+    <div id="timeAndDate"></div>
+    <p>Navigation Bar</p>
+    <button id="changeBackgroundBtn" onclick="changeBackgroundImage()">
+      Change Background
+    </button>
+  </div>
+  <div id="left">
+    <div id="leftHeading">
+      <div>Notes</div>
     </div>
-    <div id="left">
-      <div id="leftHeading">
-        <div>Notes</div>
-      </div>
-      <div id="notes" contenteditable="true">
-        <!-- User's notes go here -->
-      </div>
-      <div id="leftHeading">
-        <div>Task List</div>
-        <div class="container">
-          <div class="input-container">
-            <input type="text" id="taskInput" placeholder="Enter your task" />
-            <button onclick="addTask()">Add</button>
-          </div>
-          <ul id="taskList"></ul>
+    <div id="notes" contenteditable="true">
+      <!-- User's notes go here -->
+    </div>
+    <div id="leftHeading">
+      <div>Task List</div>
+      <div class="container">
+        <div class="input-container">
+          <input type="text" id="taskInput" placeholder="Enter your task" />
+          <button onclick="addTask()">Add</button>
         </div>
+        <ul id="taskList"></ul>
       </div>
-      <!-- User's task list goes here -->
     </div>
-    <div id="middle">
-      <div id="pomodoro">
-        <div id="clock" class="flip-clock active"></div>
-        <div id="buttons">
-          <button onclick="startTimer(60*60)">1 Hr</button>
-          <button onclick="startTimer(2*60*60)">2 Hr</button>
-          <button onclick="startTimer(45*60)">45 Min</button>
-          <button
-            id="pomodoroButton"
-            class="pomodoroPause"
-            onclick="pausePomodoro()"
-            style="
+    <!-- User's task list goes here -->
+  </div>
+  <div id="middle">
+    <div id="pomodoro">
+      <div id="clock" class="flip-clock active"></div>
+      <div id="buttons">
+        <button onclick="startTimer(60*60)">1 Hr</button>
+        <button onclick="startTimer(2*60*60)">2 Hr</button>
+        <button onclick="startTimer(45*60)">45 Min</button>
+        <button id="pomodoroButton" class="pomodoroPause" onclick="pausePomodoro()" style="
               padding: 10px 100px 10px 100px;
               margin: 10px 0px;
               transition: all ease-in-out 0.2s;
-            "
-          >
-            <i id="pauseIcon" class="fa fa-pause"></i>
-          </button>
-        </div>
+            ">
+          <i id="pauseIcon" class="fa fa-pause"></i>
+        </button>
       </div>
-      <div id="audioSection">
-        <div class="nowPlayingSection">
-          <img
-            src="https://media.tenor.com/bUDsN9jYARQAAAAC/disc-music.gif"
-            alt="music snipping disk gif"
-            height="30px"
-          />
-          <div class="musicPlayer">
-            <div class="musicPlayerHeader">
-              <h4>Now Playing...</h4>
-              <p>Enjoy your work :) </p>
-            </div>
-            <div class="musicPlayerNav">
-              <i class="fa-solid fa-angle-left"></i>
-              <i class="fa-solid fa-pause"></i>
-              <i class="fa-solid fa-angle-right"></i>
-            </div>
+    </div>
+    <div id="audioSection">
+      <div class="nowPlayingSection">
+        <img src="https://media.tenor.com/bUDsN9jYARQAAAAC/disc-music.gif" alt="music snipping disk gif"
+          height="30px" />
+        <div class="musicPlayer">
+          <div class="musicPlayerHeader">
+            <h4>Now Playing...</h4>
+            <p>Enjoy your work :) </p>
+          </div>
+          <div class="musicPlayerNav">
+            <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-pause"></i>
+            <i class="fa-solid fa-angle-right"></i>
           </div>
         </div>
-        <div class="audioButtonContainer">
-          <button class="audioButton" onclick="playAudio('music/Bollywood_lofi.mp3')">
-            Bollywood Lofi Beats
-          </button>
-          <button class="audioButton" onclick="playAudio('music/BinauralBeat.mp3')">
-            Lofi Beats
-          </button>
-          <button class="audioButton" onclick="playAudio('music/audio3.mp3')">
-            Binaural Beats
-          </button>
-        </div>
+      </div>
+      <div class="audioButtonContainer">
+        <button class="audioButton" onclick="playAudio('music/Bollywood_lofi.mp3')">
+          Bollywood Lofi Beats
+        </button>
+        <button class="audioButton" onclick="playAudio('music/BinauralBeat.mp3')">
+          Lofi Beats
+        </button>
+        <button class="audioButton" onclick="playAudio('music/audio3.mp3')">
+          Binaural Beats
+        </button>
       </div>
     </div>
-    <div id="right">
-      <div id="tabs">
-        <div id="chatTab" onclick="showIframe('chatgpt')">Ai Assistant</div>
-        <div id="searchTab" onclick="showIframe('google')">Google Search</div>
-      </div>
-      <div id="iframeContainer">
-        <iframe id="chatgpt" src="https://www.blackbox.ai/"></iframe>
-        <iframe id="google" src="https://www.google.com/search?igu=1"></iframe>
-      </div>
+  </div>
+  <div id="right">
+    <div id="tabs">
+      <div id="chatTab" onclick="showIframe('chatgpt')">Ai Assistant</div>
+      <div id="searchTab" onclick="showIframe('google')">Google Search</div>
     </div>
-    <script src="js/index.js"></script>
-  </body>
-</html>
+    <div id="iframeContainer">
+      <iframe id="chatgpt" src="https://www.blackbox.ai/"></iframe>
+      <iframe id="google" src="https://www.google.com/search?igu=1"></iframe>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
 
+</html>
