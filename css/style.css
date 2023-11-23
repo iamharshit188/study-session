@@ -1,28 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Open+Sans&display=swap");
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   display: flex;
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('images/wall1.jpg');
+  background-image: url("images/wall1.jpg");
   /* Initial background image */
   transition: background-image 0.5s ease-in-out;
 }
 
 #floatingNavbar {
   position: fixed;
+  top: 10px;
+  left: 22%;
   /* Centering and covering 50% width */
-  left: 30%;
-  width: 35%;
-  height: 5%;
+  width: 50%;
+  height: 3%;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
-  margin: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
@@ -33,7 +33,6 @@ body {
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
 }
-
 
 #leftHeading {
   font-size: 1.2em;
@@ -69,7 +68,6 @@ body {
   overflow-y: auto;
   border-radius: 10px;
 }
-
 
 .flip-clock {
   display: inline-block;
@@ -145,12 +143,78 @@ body {
   cursor: pointer;
 }
 
-.audioButton
-{
+#audioSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+#audioSection > div > img {
+  max-inline-size: 20%;
+  block-size: auto;
+  border-radius: 20px;
+}
+.audioButtonContainer {
+  display: flex;
+  flex-direction: column;
+}
+.nowPlayingSection {
+  border: 2px solid white;
+  border-radius: 20px;
+  display: flex;
+}
+.musicPlayer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.musicPlayerHeader {
+  max-width: inherit;
+  h4 {
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-style: 2rem;
+    background: white;
+    border-radius: 20px;
+    font-style: bold;
+    font-family: "JetBrains Mono";
+  }
+
+  p {
+    color: black;
+    overflow: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+  }
+}
+.musicPlayerNav {
+  background: white;
+  border-radius: 20px;
+  i {
+    font-size: 32px;
+    padding: 0 10px 0 10px;
+  }
+  i:hover {
+    transition: ease-in-out 0.4s;
+    color: cyan;
+    cursor: pointer;
+  }
+  margin: 10px;
+}
+
+.audioButton {
   font-size: 16px;
   padding: 10px 20px;
-  background-color: #3498db;
-  color: #fff;
+  background-color: white;
+  margin: 10px;
+  color: black;
   border: none;
   cursor: pointer;
   outline: none;
@@ -161,9 +225,8 @@ body {
 .audioButton:hover {
   transform: scale(1.1);
   background-color: darkblue;
-  opacity:1;
+  opacity: 1;
   color: #000;
-  
 }
 
 .audioButton:active {
@@ -260,6 +323,7 @@ iframe#chatgpt {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* Frosted glass effect */
   padding: 20px;
 }
 
@@ -293,15 +357,14 @@ iframe#chatgpt {
 }
 
 #clock {
-  font-family: 'Electrolize', sans-serif;
-  font-size: 50px;
-  font-weight: 800;
+  font-family: "Electrolize", sans-serif;
+}
+.pomodoroPause {
+  padding: 10px;
 }
 
 #audioSection {
   width: 100%;
-  bottom: 0;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -321,7 +384,7 @@ iframe#chatgpt {
   background-color: white;
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 #iframeContainer {
