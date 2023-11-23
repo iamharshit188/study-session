@@ -141,6 +141,41 @@ setInterval(updateDateTime, 1000);
 // Change background image every 5 minutes (300,000 milliseconds)
 setInterval(setRandomBackgroundImage, 300000);
 
+//Quote in middle
+const quotes = [
+  "The only way to do great work is to love what you do. - Steve Jobs",
+  "Your future is created by what you do today, not tomorrow. - Robert Kiyosaki",
+  "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+  "The expert in anything was once a beginner. - Helen Hayes",
+  "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+  "Believe you can and you're halfway there. - Theodore Roosevelt",
+  "You are never too old to set another goal or to dream a new dream. - C.S. Lewis",
+  "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+  "It always seems impossible until its done. - Nelson Mandela",
+  "The only place where success comes before work is in the dictionary. - Vidal Sassoon",
+  "Don't stop when you're tired; stop when you're done. - Marilyn Monroe",
+  "The secret of getting ahead is getting started. - Mark Twain",
+  "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+  "Dream big and dare to fail. - Norman Vaughan",
+  "Do something today that your future self will thank you for. - Unknown",
+];
+
+function getRandomQuote() {
+  return quotes[Math.floor(Math.random() * quotes.length)];
+}
+
+function displayQuote() {
+  const quoteDisplay = document.getElementById("quoteDisplay");
+  quoteDisplay.textContent = getRandomQuote();
+}
+
+// Initial display
+displayQuote();
+
+// Change the quote every 10 minutes
+setInterval(displayQuote, 10 * 60 * 1000);
+
+
 // Testing UI
 function addTask() {
   var taskInput = document.getElementById("taskInput");
