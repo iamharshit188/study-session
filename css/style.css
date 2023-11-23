@@ -14,8 +14,9 @@ body {
   #floatingNavbar {
     position: fixed;
     top: 10px;
-    left: 25%; /* Centering and covering 50% width */
+    left: 22%; /* Centering and covering 50% width */
     width: 50%;
+    height: 3%;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
