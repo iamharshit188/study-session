@@ -35,9 +35,9 @@ Yes it does. Music has the power to evoke emotions and can contribute to a posit
 #### Credits / Collaboration
 
 This project wouldn't be possible without the immense support and teamwork by
-[Rohith Vishnu Achari](https://github.com/R0h1th-1DD4E2)
-[Varun Gaur](https://github.com/VarunGaur01)
-[Vansh Dixit](https://github.com/BatteryorVansh)
+[Rohith Vishnu Achari](https://github.com/R0h1th-1DD4E2) <br>
+[Varun Gaur](https://github.com/VarunGaur01) <br>
+[Vansh Dixit](https://github.com/BatteryorVansh) <br>
 Thank you all of you for your efforts and working through out the day and night to complete this Project. [I](https://github.com/iamharshit188) am really grateful to you especially [Rohith Vishnu Achari](https://github.com/R0h1th-1DD4E2)
 [Varun Gaur](https://github.com/VarunGaur01) for styling the website.
 
