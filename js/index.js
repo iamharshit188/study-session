@@ -1,5 +1,8 @@
 let timer;
 let currentBackground = 1; // Initial background image
+let timerStatus = false;
+// buton hidden on statup
+hideButton();
 
 function startTimer(duration) {
   clearInterval(timer);
@@ -7,23 +10,51 @@ function startTimer(duration) {
   let timeLeft = duration;
 
   timer = setInterval(function () {
-    let hours = Math.floor(timeLeft / 3600);
-    let minutes = Math.floor((timeLeft % 3600) / 60);
-    let seconds = timeLeft % 60;
+    if (!timerStatus) {
+      let hours = Math.floor(timeLeft / 3600);
+      let minutes = Math.floor((timeLeft % 3600) / 60);
+      let seconds = timeLeft % 60;
 
-    timerDisplay.textContent = `${padZero(hours)}:${padZero(minutes)}:${padZero(
-      seconds
-    )}`;
+      timerDisplay.textContent = `${padZero(hours)}:${padZero(
+        minutes,
+      )}:${padZero(seconds)}`;
 
-    if (timeLeft === 0) {
-      clearInterval(timer);
-      timerDisplay.textContent = "00:00:00";
+      if (timeLeft === 0) {
+        clearInterval(timer);
+        timerDisplay.textContent = "00:00:00";
+        hideButton();
+      }
+      if (seconds) {
+        showButton();
+      }
+      timeLeft--;
     }
-
-    timeLeft--;
   }, 1000);
 }
 
+function pausePomodoro() {
+  timerStatus = !timerStatus;
+  let pomodoroButton = document.getElementById("pomodoroButton");
+  let pauseIcon = document.getElementById("pauseIcon");
+  if (timerStatus) {
+    pauseIcon.classList.remove("fa-pause");
+    pauseIcon.classList.add("fa-play");
+  } else {
+    pauseIcon.classList.remove("fa-play");
+    pauseIcon.classList.add("fa-pause");
+  }
+  console.log("Pomodoro status:", timerStatus);
+}
+
+function hideButton() {
+  let pomodoroButton = document.getElementById("pomodoroButton");
+  pomodoroButton.style.display = "none";
+}
+
+function showButton() {
+  let pomodoroButton = document.getElementById("pomodoroButton");
+  pomodoroButton.style.display = "block";
+}
 function showIframe(iframeId) {
   let iframes = document.querySelectorAll("iframe");
   iframes.forEach((iframe) => (iframe.style.display = "none"));
@@ -59,9 +90,8 @@ function playAudio(audioSource) {
   audio.play();
 
   // Display audio information
-  document.getElementById(
-    "audioInfo"
-  ).textContent = `Now Playing: ${audioSource}`;
+  document.getElementById("audioInfo").textContent =
+    `Now Playing: ${audioSource}`;
 }
 
 updateDateTime(); // Initial call
