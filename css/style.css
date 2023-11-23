@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Open+Sans&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -267,11 +269,8 @@ iframe#chatgpt {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
   /* Frosted glass effect */
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #right {
@@ -289,6 +288,24 @@ iframe#chatgpt {
   border-bottom-left-radius: 20px;
 }
 
+#pomodoro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+#clock {
+  font-family: 'Electrolize', sans-serif;
+}
+
 #audioSection {
   width: 100%;
   display: flex;
@@ -301,6 +318,7 @@ iframe#chatgpt {
   margin-top: 20px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }
 
 #tabs {
