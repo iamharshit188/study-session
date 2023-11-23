@@ -47,7 +47,7 @@ function setRandomBackgroundImage() {
 }
 
 function changeBackgroundImage() {
-  currentBackground = (currentBackground % 10) + 1; // Loop through 1 to 10
+  currentBackground = (currentBackground % 9) + 1; // Loop through 1 to 10
   setRandomBackgroundImage();
 }
 
