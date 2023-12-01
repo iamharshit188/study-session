@@ -28,6 +28,7 @@
       Switch Background
     </button>
   </div>
+
   <div id="left">
     <div id="leftHeading">
       <div>Your Notes here</div>
@@ -44,9 +45,11 @@
         <button onclick="addTask()">Add</button>
       </div>
       <ul id="taskList"></ul>
+      <button onclick="clearTasks()">Clear</button>
     </div>
     <!-- User's task list goes here -->
   </div>
+
   <div id="middle">
     <div class="quote-container" id="quoteDisplay"></div>
     <div id="pomodoro">
@@ -98,7 +101,7 @@
   </div>
   <div id="right">
     <div id="tabs">
-      <div id="chatTab" onclick="showIframe('chatgpt')">Ai Assistant</div>
+      <div id="chatTab"  class="selected" onclick="showIframe('chatgpt')">Ai Assistant</div>
       <div id="searchTab" onclick="showIframe('google')">Google Search</div>
     </div>
     <div id="iframeContainer">

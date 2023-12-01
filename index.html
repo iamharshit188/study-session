@@ -20,8 +20,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 body {
-            margin: 0%;
-            padding: 0%;
+            
+  margin: 0%;
+  padding: 0%;
             background-image: url(images/wall5.jpg);
             background-size: cover;
             background-position: center;
@@ -53,7 +54,7 @@ body {
             color: #333;
         }
         /* Style the button */
-.button {
+button {
   background-color: #0a0a23; /* Black background color */
   color: #ffffff; /* White text color */
   padding: 15px; /* Add padding to the button */
@@ -65,18 +66,17 @@ body {
 }
 
 /* Style the button when hovered */
-.button:hover {
+button:hover {
   background-color: #4c90af; /* Change background color to blue on hover */
   transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
 /* Style the button when active ( clicked ) */
-.button:active {
+button:active {
   transform: translateY(2px); /* Move the button slightly down on click */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a deeper shadow effect on click */
 }
-
-        #continueBtn {
+#continueBtn {
             background-color: rgb(76, 144, 175);
             color: #fff;
             border: none;
@@ -97,15 +97,13 @@ body {
   </div>
     </div>
   
-  <script>
-    
+  <script>  
     document.addEventListener('DOMContentLoaded', function () {
       var modal = document.getElementById('welcomeModal');
       var continueBtn = document.getElementById('continueBtn');
 
       // Show the modal when the page loads
       modal.style.display = 'block';
-
       // Redirect to the second page when the "Continue" button is clicked
       continueBtn.addEventListener('click', function () {
         window.location.href = "secpage.html"; // Change the URL accordingly

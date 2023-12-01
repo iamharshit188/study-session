@@ -200,3 +200,12 @@ function addTask() {
     taskInput.value = "";
   }
 }
+function clearTasks()
+{
+  var list=document.querySelector('#taskList')
+  var allTasks=document.querySelectorAll('#taskList li')
+  allTasks.forEach((task)=>{
+    if (task.style.textDecoration === 'line-through') 
+       list.removeChild(task)
+  })
+}
