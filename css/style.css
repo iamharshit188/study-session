@@ -56,7 +56,7 @@ body {
 .container {
   padding: 10px;
   margin-bottom: 10px;
-  overflow-y: auto;
+  overflow-y: auto; 
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 10px;
@@ -424,19 +424,15 @@ ul {
 }
 
 li {
-  display: flex;
-  align-items: center;
   margin-bottom: 10px;
   padding: 5%;
   background-color: white;
   border: 1px solid #edebeb;
   border-radius: 10px;
 }
-
 .checkbox {
   margin-right: 10px;
 }
-
 .quote-container {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
